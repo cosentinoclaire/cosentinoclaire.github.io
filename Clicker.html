@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <img id= "weee" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsoZRijZ0Ata9-w3nHKzjPN2Io06whwoRC3NSdQ9KT2MQBag_Q1WcNeNy0FMt7SlF7HYA:https://us-static.z-dn.net/files/d1b/b6918cb82a397b5bd7ca6aa002b27ad6.jpg&usqp=CAU">
+    <img id ="ahhh" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5d5wjXPRKwbfrG0eipSyB3pj4zMiVaP9selC3pbtzt16JG-BJXOcqo3kFoG8IbI53lv4:https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4fce1e8d30dc04c2ebdc6e3063fb6e96~c5_720x720.jpeg%3Fx-expires%3D1698548400%26x-signature%3DGsZrzB9o%252FC%252B%252BxSoujs4%252FNRhePEM%253D&usqp=CAU">
+    <img id ="eeee" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMullFE1RZ7eva3sSmfGMW2HIqFRLw3KRcAk4tXwNI0S1mJ8yVRTSxz5G3imND2qicvJ4:https://external-preview.redd.it/d5HVH9KArwXAnflYct2qqEnevxlmOuvYOixNnjdRnxE.jpg%3Fauto%3Dwebp%26s%3Dcef3e442566ffec145dc8510456412cb62ced8f2&usqp=CAU">
+    <p id="score">score=0</p>
+</head>
+<body>
+   
+    
+</body>
+</html>
+<script>
+var score = 0
+var ppc = 1
+document.getElementById("weee").addEventListener("click", increaseScore)
+document.getElementById("ahhh").addEventListener("click", doubleScore)
+document.getElementById("eeee").addEventListener("click", autoClicker)
+
+function increaseScore(){
+    score=score+ppc;
+    document.getElementById("score").innerText="SHORSE:"+score
+    console.log(score)
+}
+function doubleScore(){
+    ppc=ppc+1
+}
+function autoClicker(){
+    setInterval(increaseScore,100);
+    }
+
+
+</script>
