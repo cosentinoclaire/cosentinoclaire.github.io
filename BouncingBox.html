@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
- 
-  </head>
-  <body>
-    <div>
 
-    </div>
-  </body>
+<head>
+  <style>
+    div {
+      background-color: blueviolet;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 700px;
+      left: 1500px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="box">
+  </div>
+</body>
+
 </html>
 <script>
-    var bouncyBoi = "weewoo"
+  var box = "move dog"
+  document.getElementById("box").addEventListener("click", moveBox)
+  var topPos = 700
+  var leftPos = 1500
+  var leftDir = 50
+  var topDirection = 50
+  setInterval(moveBox, 15)
+  function moveBox() {
+    
+    document.getElementById("box").style.top = (topPos + "px")
+    document.getElementById("box").style.left = (leftPos + "px")
+    leftPos = leftPos + leftDir
+    topPos = topPos + topDirection
+    if (leftPos >= 1780) {
+      leftDir = -10
+    }
+    if (leftPos <= 0) {
+      leftDir = 10
+    }
+    if (topPos >= 855) {
+      topDirection = -10
+    }
+    if (topPos <= 0) {
+      topDirection = 10
+    }
+  
+  }
 </script>
